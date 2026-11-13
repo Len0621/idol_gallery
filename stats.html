@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN" data-mode="viewer">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>统计 — 神楽るかとのカケラ</title>
+<meta name="description" content="按年份与月份查看参战、支出与远征的记录。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%23f7f4ee'/%3E%3Crect x='4' y='4' width='24' height='21' fill='%23b23c2c'/%3E%3Crect x='4' y='25' width='24' height='3' fill='%23f7f4ee'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-name">Personal Louvre</span><span class="brand-sub">Cheki Archive</span></a>
+    <div class="head-right">
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" data-nav="home">拍立得</a>
+        <a href="stats.html" data-nav="stats">统计</a>
+      </nav>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap stats-guard" id="stats-guard">
+  <p>统计页面仅编辑者可见。</p>
+  <p class="hint">点右上角的锁，输入密码后进入编辑者模式。</p>
+</div>
+
+<main class="wrap stats-wrap">
+  <header class="stats-head">
+    <p class="eyebrow">ARCHIVE · STATS</p>
+    <h1 class="page-title">数字で見る、<span class="year-switch" id="year-switch"><button type="button" data-year="-1" aria-label="上一年">◀</button><b id="year-label">2026</b><button type="button" data-year="1" aria-label="下一年">▶</button></span>。</h1>
+    <p class="page-lede" id="lede">—</p>
+  </header>
+
+  <nav class="month-strip" id="month-strip" aria-label="按年份与月份查看"></nav>
+  <p class="strip-hint">← 左右滑动看 12 个月 →</p>
+
+  <dl class="kpis" id="kpis"></dl>
+
+  <section class="chart">
+    <div class="chart-head">
+      <h2>每月支出</h2>
+      <p>按类别堆叠 · 日元</p>
+    </div>
+    <div id="monthly"></div>
+    <p class="chart-hint">← 左右滑动看全年 →</p>
+    <ul class="legend" id="legend"></ul>
+  </section>
+
+  <div class="two-col">
+    <section class="chart">
+      <div class="chart-head">
+        <h2>花在哪儿</h2>
+        <p>类别构成</p>
+      </div>
+      <div class="bars" id="cats"></div>
+    </section>
+    <section class="chart">
+      <div class="chart-head">
+        <h2>去得最多</h2>
+        <p>场馆</p>
+      </div>
+      <div class="bars" id="venues"></div>
+    </section>
+  </div>
+
+  <div class="two-col">
+    <section class="chart">
+      <div class="chart-head">
+        <h2>听得最多</h2>
+        <p>曲目</p>
+      </div>
+      <div class="bars" id="songs"></div>
+    </section>
+    <section class="chart">
+      <div class="chart-head">
+        <h2>衣装</h2>
+        <p>拍立得张数</p>
+      </div>
+      <div class="costumes" id="costumes"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap row">
+    <p class="note" data-site-note>她就是我的蒙娜丽莎。</p>
+    <p><span id="foot-year">2026</span> · for one oshi</p>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/stats.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN" data-mode="viewer">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>神楽るかとのカケラ</title>
+<meta name="description" content="Len 的参战记录：按日期排列的拍立得、现场与统计。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%23f7f4ee'/%3E%3Crect x='4' y='4' width='24' height='21' fill='%23b23c2c'/%3E%3Crect x='4' y='25' width='24' height='3' fill='%23f7f4ee'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-name">Personal Louvre</span><span class="brand-sub">Cheki Archive</span></a>
+    <div class="head-right">
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" data-nav="home">拍立得</a>
+        <a href="stats.html" data-nav="stats">统计</a>
+      </nav>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Archive  · Cheki</p>
+    <h1><span id="hero-member">るか</span>を追いかけて、<br><span class="year-switch" id="year-switch"><button type="button" data-year="-1" aria-label="上一年">◀</button><b id="year-label">2026</b><button type="button" data-year="1" aria-label="下一年">▶</button></span>。</h1>
+    <p class="lede">文字不会消散——点开任意一张，能看到那天的场馆、还有她在照片背面写下的字，和她的点滴记录。</p>
+    <dl class="hero-stats">
+      <div class="hstat"><dt>参战</dt><dd><span id="stat-shows">—</span><small>场</small></dd></div>
+      <div class="hstat"><dt>拍立得</dt><dd><span id="stat-cheki">—</span><small>张</small></dd></div>
+      <div class="hstat"><dt>远征</dt><dd><span id="stat-trip">—</span><small>天</small></dd></div>
+    </dl>
+  </section>
+
+  <div class="toolbar">
+    <div class="chips" id="filter-chips" role="group" aria-label="筛选">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">全部</button>
+      <button class="chip" type="button" data-filter="signed" aria-pressed="false">有签名</button>
+      <button class="chip" type="button" data-filter="special" aria-pressed="false">特殊</button>
+      <button class="chip" type="button" data-filter="fav" aria-pressed="false">♥ 收藏</button>
+    </div>
+    <div class="toolbar-side">
+      <span class="select-wrap">
+        <select class="select" id="venue-filter" aria-label="按所在地筛选">
+          <option value="all">全部地区</option>
+        </select>
+      </span>
+      <span class="select-wrap">
+        <select class="select" id="sort" aria-label="排序">
+          <option value="desc">最新优先</option>
+          <option value="asc">最早优先</option>
+          <option value="rarity">稀有度</option>
+        </select>
+      </span>
+      <button class="tool-btn" type="button" id="random-btn" aria-label="随机一张" title="随机重温一张"><span class="ico" aria-hidden="true">↻</span><span class="lbl">随机一张</span></button>
+      <span class="count" id="count">显示 0 / 0</span>
+    </div>
+  </div>
+
+  <section id="timeline" aria-label="拍立得墙"></section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap row">
+    <p class="note" data-site-note>她就是我的蒙娜丽莎。</p>
+    <p class="foot-actions"><span id="foot-year">2026</span> · for one oshi</p>
+  </div>
+</footer>
+
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
